@@ -21,11 +21,11 @@ public class Player : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
+        CreateBalls();
     }
 
     void CreateBalls()
     {
-
+        Debug.Log("Yep");
     }
 }
