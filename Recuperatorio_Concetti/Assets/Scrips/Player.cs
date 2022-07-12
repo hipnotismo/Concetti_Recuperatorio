@@ -5,11 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] GameObject ball;
-    int ballState;
+     public int ballState;
+
+    [SerializeField] BallMovement _ballMovement;
+    [SerializeField] BallMovement _ballMovementTwo;
+    [SerializeField] BallMovement _ballMovementThree;
+    [SerializeField] BallMovement _ballMovementFour;
+
+
 
     void Start()
     {
+      //  _ballMovement = MovementOne();
         ballState = 1;
     }
 
@@ -32,14 +39,20 @@ public class Player : MonoBehaviour
 
     void CreateBalls()
     {
-        Instantiate(ball);
+       // Instantiate(ball);
+        
         if (ballState == 1)
         {
             Debug.Log("Es uno: " + ballState);
+            _ballMovement.movement();
         }
         else
         {
             Debug.Log("Es Dos: " + ballState);
+            _ballMovement.movement();
+            _ballMovementTwo.movement();
+            _ballMovementThree.movement();
+            _ballMovementFour.movement();
 
         }
     }

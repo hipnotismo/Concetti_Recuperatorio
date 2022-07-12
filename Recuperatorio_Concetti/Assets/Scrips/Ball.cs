@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+
     void Start()
     {
         
@@ -13,13 +14,13 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ballMovement();
-        // transform.position += new Vector3(5, 0, 0) * Time.deltaTime;
+       // ballMovement();
+        transform.position += new Vector3(5, 0, 0) * Time.deltaTime;
         Destroy(gameObject,1f);
     }
 
     void ballMovement()
     {
-
+        //_ballMovement.movement();
     }
 }
