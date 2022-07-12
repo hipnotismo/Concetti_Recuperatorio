@@ -6,19 +6,23 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] GameObject ball;
+    int ballState;
+
     void Start()
     {
-        
+        ballState = 1;
     }
 
     void Update()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ballState = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ballState = 2;
+        }
     }
 
     private void OnMouseDown()
@@ -29,5 +33,14 @@ public class Player : MonoBehaviour
     void CreateBalls()
     {
         Instantiate(ball);
+        if (ballState == 1)
+        {
+            Debug.Log("Es uno: " + ballState);
+        }
+        else
+        {
+            Debug.Log("Es Dos: " + ballState);
+
+        }
     }
 }
