@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    [SerializeField] GameObject ball;
     void Start()
     {
         
@@ -26,6 +28,6 @@ public class Player : MonoBehaviour
 
     void CreateBalls()
     {
-        Debug.Log("Yep");
+        Instantiate(ball);
     }
 }

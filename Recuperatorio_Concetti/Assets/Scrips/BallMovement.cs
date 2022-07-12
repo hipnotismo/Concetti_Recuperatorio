@@ -13,6 +13,9 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += new Vector3(5, 0, 0) * Time.deltaTime;
+        Destroy(gameObject,1f);
     }
+
+
 }
